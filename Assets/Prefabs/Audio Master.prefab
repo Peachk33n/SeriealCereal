@@ -255,6 +255,26 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  dialogueA:
+    theClip: {fileID: 8300000, guid: dbabd32c0372b094cb4ea94213132b34, type: 3}
+    baseVolume: 1
+    volRandom: 0.034
+    basePitch: 1
+    pitchRandom: 0.024
+    spatialBlend: 0
+    voiceMax: 1
+    voiceDuration: 0
+    theSource: {fileID: 0}
+  dialogueB:
+    theClip: {fileID: 8300000, guid: 3fca2c795821597409a514f638b22277, type: 3}
+    baseVolume: 1
+    volRandom: 0.038
+    basePitch: 1
+    pitchRandom: 0.026
+    spatialBlend: 0
+    voiceMax: 1
+    voiceDuration: 0
+    theSource: {fileID: 0}
   spoonClink:
     theClip: {fileID: 8300000, guid: cfddbf71e756f59459814642deb97481, type: 3}
     baseVolume: 0.898
@@ -510,6 +530,30 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: fridgeClose.baseVolume
       value: 0.945
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dialogueA.theClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dbabd32c0372b094cb4ea94213132b34, type: 3}
+    - target: {fileID: 0}
+      propertyPath: dialogueB.theClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fca2c795821597409a514f638b22277, type: 3}
+    - target: {fileID: 0}
+      propertyPath: dialogueB.volRandom
+      value: 0.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dialogueA.volRandom
+      value: 0.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dialogueA.pitchRandom
+      value: 0.024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dialogueB.pitchRandom
+      value: 0.026
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

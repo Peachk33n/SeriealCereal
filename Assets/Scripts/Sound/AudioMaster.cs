@@ -64,6 +64,13 @@ public class AudioMaster : MonoBehaviour {
 	// My first instinct is to draw the spreadCurve to decrease from 180 degrees (at a distance of zero) to ~20 degrees (at MasterDistanceMax).
 	// The result will be sounds that narrow, but become increasingly directional, as their distance increases.
 
+	[Header("Menus/UI")]
+
+	public AudioPackage dialogueA;
+	public AudioPackage dialogueB;
+
+	[Header("In-Game")]
+
 	public AudioPackage spoonClink;
 	public AudioPackage bowlClink;
 	public AudioPackage pouringCereal;
@@ -71,6 +78,8 @@ public class AudioMaster : MonoBehaviour {
 	public AudioPackage[] footsteps;
 	public AudioPackage fridgeOpen;
 	public AudioPackage fridgeClose;
+
+
 
 	void Awake()
 	{
