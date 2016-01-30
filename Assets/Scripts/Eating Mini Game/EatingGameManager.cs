@@ -2,14 +2,26 @@
 using System.Collections;
 
 public class EatingGameManager : MonoBehaviour {
+	private static EatingGameManager instance = null;
+	public static EatingGameManager Instance { get { return instance; } }
 
-	// Use this for initialization
-	void Start () {
-	
+	private Gyroscope mGyro = new Gyroscope();
+
+
+	void Awake(){
+		if(instance != null && instance != this)
+		{
+			Destroy(this.gameObject);
+			return;
+		}
+		else
+		{
+			instance = this;
+		}
+		DontDestroyOnLoad(this.gameObject);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void Start(){
+		mGyro.
 	}
 }
