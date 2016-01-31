@@ -278,9 +278,9 @@ MonoBehaviour:
   spoonClink:
     theClip: {fileID: 8300000, guid: cfddbf71e756f59459814642deb97481, type: 3}
     baseVolume: 0.898
-    volRandom: 0.042
+    volRandom: 0.077
     basePitch: 1
-    pitchRandom: 0.038
+    pitchRandom: 0.065
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
@@ -288,9 +288,9 @@ MonoBehaviour:
   bowlClink:
     theClip: {fileID: 8300000, guid: a12a1cbbfbd882f478504e33d531661b, type: 3}
     baseVolume: 0.937
-    volRandom: 0.046
+    volRandom: 0.062
     basePitch: 1
-    pitchRandom: 0.036
+    pitchRandom: 0.052
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
@@ -298,9 +298,9 @@ MonoBehaviour:
   pouringCereal:
     theClip: {fileID: 8300000, guid: cd2ef4cf8fb4764478dd802947fc1fae, type: 3}
     baseVolume: 0.973
-    volRandom: 0.044
+    volRandom: 0.056
     basePitch: 1
-    pitchRandom: 0.03
+    pitchRandom: 0.036
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
@@ -308,38 +308,38 @@ MonoBehaviour:
   pouringMilk:
     theClip: {fileID: 8300000, guid: cbb17dad1096d234193441b5fb1915f3, type: 3}
     baseVolume: 0.973
-    volRandom: 0.042
+    volRandom: 0.058
     basePitch: 1
-    pitchRandom: 0.034
+    pitchRandom: 0.044
     spatialBlend: 0
-    voiceMax: 1
+    voiceMax: 2
     voiceDuration: 0
     theSource: {fileID: 8258348}
   footsteps:
   - theClip: {fileID: 8300000, guid: 234179f21a0de1441bc8663f18d43081, type: 3}
-    baseVolume: 0.902
-    volRandom: 0.038
+    baseVolume: 0.808
+    volRandom: 0.122
     basePitch: 1
-    pitchRandom: 0.042
+    pitchRandom: 0.093
     spatialBlend: 0
     voiceMax: 2
     voiceDuration: 0
     theSource: {fileID: 0}
-  - theClip: {fileID: 8300000, guid: 18d600a394d11a042aafec189fa39623, type: 3}
-    baseVolume: 0.879
-    volRandom: 0.048
+  - theClip: {fileID: 8300000, guid: d72e9b795042e5f4bb3122d3aa3d8955, type: 3}
+    baseVolume: 0.796
+    volRandom: 0.116
     basePitch: 1
-    pitchRandom: 0.038
+    pitchRandom: 0.095
     spatialBlend: 0
-    voiceMax: 2
+    voiceMax: 1
     voiceDuration: 0
     theSource: {fileID: 0}
   fridgeOpen:
     theClip: {fileID: 8300000, guid: 08debe9780eb49b43bacfa831b8da785, type: 3}
     baseVolume: 0.918
-    volRandom: 0.038
+    volRandom: 0.107
     basePitch: 1
-    pitchRandom: 0.034
+    pitchRandom: 0.077
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
@@ -347,9 +347,9 @@ MonoBehaviour:
   fridgeClose:
     theClip: {fileID: 8300000, guid: 57be897539916f947928f9b98eb908de, type: 3}
     baseVolume: 0.945
-    volRandom: 0.034
+    volRandom: 0.097
     basePitch: 1
-    pitchRandom: 0.028
+    pitchRandom: 0.069
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
@@ -380,22 +380,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].theClip
       value: 
-      objectReference: {fileID: 8300000, guid: 18d600a394d11a042aafec189fa39623, type: 3}
+      objectReference: {fileID: 8300000, guid: d72e9b795042e5f4bb3122d3aa3d8955, type: 3}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].baseVolume
-      value: 0.879
+      value: 0.796
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[0].baseVolume
-      value: 0.902
+      value: 0.808
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[0].volRandom
-      value: 0.038
+      value: 0.122
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].volRandom
-      value: 0.048
+      value: 0.116
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].basePitch
@@ -407,15 +407,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringCereal.pitchRandom
-      value: 0.03
+      value: 0.036
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringMilk.pitchRandom
-      value: 0.034
+      value: 0.044
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringCereal.volRandom
-      value: 0.044
+      value: 0.056
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringCereal.voiceMax
@@ -423,7 +423,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringMilk.voiceMax
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[0].voiceMax
@@ -431,7 +431,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].voiceMax
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: theMixer
@@ -445,15 +445,15 @@ Prefab:
         type: 2}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].pitchRandom
-      value: 0.038
+      value: 0.095
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[0].pitchRandom
-      value: 0.042
+      value: 0.093
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringMilk.volRandom
-      value: 0.042
+      value: 0.058
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[0].spatialBlend
@@ -473,19 +473,19 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 57be897539916f947928f9b98eb908de, type: 3}
     - target: {fileID: 0}
       propertyPath: fridgeClose.volRandom
-      value: 0.034
+      value: 0.097
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: fridgeClose.pitchRandom
-      value: 0.028
+      value: 0.069
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: fridgeOpen.pitchRandom
-      value: 0.034
+      value: 0.077
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: fridgeOpen.volRandom
-      value: 0.038
+      value: 0.107
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: spoonClink.theClip
@@ -493,19 +493,19 @@ Prefab:
       objectReference: {fileID: 8300000, guid: cfddbf71e756f59459814642deb97481, type: 3}
     - target: {fileID: 0}
       propertyPath: spoonClink.volRandom
-      value: 0.042
+      value: 0.077
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: spoonClink.pitchRandom
-      value: 0.038
+      value: 0.065
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bowlClink.volRandom
-      value: 0.046
+      value: 0.062
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bowlClink.pitchRandom
-      value: 0.036
+      value: 0.052
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: spoonClink.baseVolume

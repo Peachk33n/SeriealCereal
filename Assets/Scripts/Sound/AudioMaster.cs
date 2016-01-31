@@ -79,8 +79,6 @@ public class AudioMaster : MonoBehaviour {
 	public AudioPackage fridgeOpen;
 	public AudioPackage fridgeClose;
 
-
-
 	void Awake()
 	{
 		if (instance == null)
@@ -180,6 +178,23 @@ public class AudioMaster : MonoBehaviour {
 		if (thePackage.voiceCount > 0) {
 			--thePackage.voiceCount;
 		}
+		yield return null;
+	}
+
+	Coroutine FootstepRoutine;
+	int stepIndex = 0;
+
+	public void PlayFootsteps(float rate) {
+		if (FootstepRoutine == null) {
+			FootstepRoutine = StartCoroutine (FootstepTimer(rate));
+		}
+	}
+
+	IEnumerator FootstepTimer(float rate) {
+		yield return new WaitForSeconds(0.01f / rate);
+		PlayAudioPackage(footsteps[stepIndex], theTransform.position);
+		stepIndex = (stepIndex + 1) % footsteps.Length;
+		FootstepRoutine = null;
 		yield return null;
 	}
 }

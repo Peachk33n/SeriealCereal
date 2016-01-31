@@ -14,7 +14,15 @@ public class movePlayer : MonoBehaviour {
 	void Update () {
 		float moveX = Input.GetAxisRaw("Horizontal");
 		float moveY = Input.GetAxisRaw("Vertical");
-		transform.Translate(Vector2.right * moveX * playerSpeed * Time.deltaTime);
-		transform.Translate(Vector2.up * moveY * playerSpeed * Time.deltaTime);
+		Vector2 rateX = Vector2.right * moveX * playerSpeed * Time.deltaTime;
+		Vector2 rateY = Vector2.up * moveY * playerSpeed * Time.deltaTime;
+
+		transform.Translate(rateX);
+		transform.Translate(rateY);
+
+		if (Mathf.Abs(rateX.x) > 0 | Mathf.Abs(rateY.y) > 0) {
+			Debug.Log ("Moving PC at rateX of: " + rateX.x + " and rateY of: " + rateY.y);
+			AudioMaster.instance.PlayFootsteps(Mathf.Abs(rateX.x) + Mathf.Abs(rateY.y));
+		}
 	}
 }
