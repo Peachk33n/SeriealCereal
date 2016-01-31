@@ -73,8 +73,10 @@ public class AudioMaster : MonoBehaviour {
 
 	public AudioPackage spoonClink;
 	public AudioPackage bowlClink;
+	public AudioPackage cerealBox;
 	public AudioPackage pouringCereal;
 	public AudioPackage pouringMilk;
+	public AudioPackage chewing;
 	public AudioPackage[] footsteps;
 	public AudioPackage fridgeOpen;
 	public AudioPackage fridgeClose;
