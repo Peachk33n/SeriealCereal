@@ -32,6 +32,8 @@ AudioMixerGroupController:
   m_Volume: 6e77b83bd200cc34ea35b7d1bed92968
   m_Pitch: 03e65eb2a6cc11f47993910a298c72e8
   m_Effects:
+  - {fileID: 24413580}
+  - {fileID: 24415126}
   - {fileID: 24400002}
   m_UserColorIndex: 0
   m_Mute: 0
@@ -50,6 +52,46 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &24413580
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 10bcd4ab971f13f4b984239840cd58a8
+  m_EffectName: Send
+  m_MixLevel: edd468a40071c144abe7acb03497d574
+  m_Parameters: []
+  m_SendTarget: {fileID: 24415126}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &24415126
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 55c5fdafd790d5848a2b9252648ddcaf
+  m_EffectName: Duck Volume
+  m_MixLevel: f8486fd789bdd1744a428dae455b8712
+  m_Parameters:
+  - m_ParameterName: Threshold
+    m_GUID: 79caea58d45e4714c8a0b98f7b2bf70b
+  - m_ParameterName: Ratio
+    m_GUID: 81eb1b18bb34d264a9c0f4f4b0fd0d59
+  - m_ParameterName: Attack Time
+    m_GUID: 715a164f25888a84291ff291d313f301
+  - m_ParameterName: Release Time
+    m_GUID: 6a35c1de903fd96448803cfec8034238
+  - m_ParameterName: Make-up Gain
+    m_GUID: 18a515cbe2f5dba40a75642722047a23
+  - m_ParameterName: Knee
+    m_GUID: c10e0de803956c040a6de7471fcc0492
+  - m_ParameterName: Sidechain Mix
+    m_GUID: c32d6de8bd15f314c81fc6a6cbacf27e
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!245 &24500003
 AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
@@ -58,5 +100,11 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 8818fa65f7175e14ba7193b62df31894
-  m_FloatValues: {}
+  m_FloatValues:
+    edd468a40071c144abe7acb03497d574: 0
+    79caea58d45e4714c8a0b98f7b2bf70b: -3
+    c10e0de803956c040a6de7471fcc0492: 2
+    18a515cbe2f5dba40a75642722047a23: 2.5
+    6a35c1de903fd96448803cfec8034238: 0.094
+    715a164f25888a84291ff291d313f301: 0.016
   m_TransitionOverrides: {}

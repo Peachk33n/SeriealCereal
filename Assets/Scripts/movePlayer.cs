@@ -15,9 +15,17 @@ public class movePlayer : MonoBehaviour {
 	void Update () {
 		float moveX = Input.GetAxisRaw("Horizontal");
 		float moveY = Input.GetAxisRaw("Vertical");
-		transform.Translate(Vector2.right * moveX * playerSpeed * Time.deltaTime);
+		
+        Vector2 rateX = Vector2.right * moveX * playerSpeed * Time.deltaTime;
+        Vector2 rateY = Vector2.up * moveY * playerSpeed * Time.deltaTime;
+        
+        transform.Translate(rateX);
+        transform.Translate(rateY);
+
+        transform.Translate(Vector2.right * moveX * playerSpeed * Time.deltaTime);
 		transform.Translate(Vector2.up * moveY * playerSpeed * Time.deltaTime);
-		if (Input.GetMouseButton(0)) {
+		
+        if (Input.GetMouseButton(0)) {
 			// item selection using "mouse"
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
@@ -35,6 +43,11 @@ public class movePlayer : MonoBehaviour {
 			var targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			targetPos.z = transform.position.z;
 			transform.position = Vector3.MoveTowards(transform.position, targetPos, playerSpeed * Time.deltaTime);
+            // TODO: Integrate mouse movement with AudioMaster
+		}
+        if (Mathf.Abs(rateX.x) > 0 | Mathf.Abs(rateY.y) > 0) {
+			Debug.Log ("Moving PC at rateX of: " + rateX.x + " and rateY of: " + rateY.y);
+			AudioMaster.instance.PlayFootsteps(Mathf.Abs(rateX.x) + Mathf.Abs(rateY.y));
 		}
 	}
 

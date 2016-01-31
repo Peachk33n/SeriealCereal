@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &109132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 450764}
+  - 82: {fileID: 8276808}
+  m_Layer: 0
+  m_Name: Pouring Cereal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &116386
 GameObject:
   m_ObjectHideFlags: 0
@@ -26,7 +42,7 @@ GameObject:
   - 4: {fileID: 451456}
   - 82: {fileID: 8221586}
   m_Layer: 0
-  m_Name: Pouring Cereal
+  m_Name: Washing Machine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,6 +59,22 @@ GameObject:
   - 114: {fileID: 11454038}
   m_Layer: 0
   m_Name: Audio Master
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &183470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 467634}
+  - 82: {fileID: 8231552}
+  m_Layer: 0
+  m_Name: Outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,9 +102,23 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 451456}
+  - {fileID: 450764}
   - {fileID: 405474}
+  - {fileID: 467634}
+  - {fileID: 451456}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &450764
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 407988}
   m_RootOrder: 0
 --- !u!4 &451456
 Transform:
@@ -85,7 +131,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407988}
-  m_RootOrder: 0
+  m_RootOrder: 3
+--- !u!4 &467634
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 407988}
+  m_RootOrder: 2
 --- !u!82 &8221586
 AudioSource:
   m_ObjectHideFlags: 1
@@ -96,14 +154,89 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300001, guid: 367229146e3bcb24fbbb88991b97a168,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: cd2ef4cf8fb4764478dd802947fc1fae, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 0d42ff6493e88964d9851da1398a6a85, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.291
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
-  Priority: 50
+  Priority: 90
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &8231552
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183470}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 367229146e3bcb24fbbb88991b97a168,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 58954a301c4dbe24cae5248367754134, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.601
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 90
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -236,6 +369,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &8276808
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109132}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 367229146e3bcb24fbbb88991b97a168,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: cd2ef4cf8fb4764478dd802947fc1fae, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 50
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11454038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,12 +463,32 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  dialogueA:
+    theClip: {fileID: 8300000, guid: dbabd32c0372b094cb4ea94213132b34, type: 3}
+    baseVolume: 1
+    volRandom: 0.034
+    basePitch: 1
+    pitchRandom: 0.024
+    spatialBlend: 0
+    voiceMax: 1
+    voiceDuration: 0
+    theSource: {fileID: 0}
+  dialogueB:
+    theClip: {fileID: 8300000, guid: 3fca2c795821597409a514f638b22277, type: 3}
+    baseVolume: 1
+    volRandom: 0.038
+    basePitch: 1
+    pitchRandom: 0.026
+    spatialBlend: 0
+    voiceMax: 1
+    voiceDuration: 0
+    theSource: {fileID: 0}
   spoonClink:
     theClip: {fileID: 8300000, guid: cfddbf71e756f59459814642deb97481, type: 3}
     baseVolume: 0.898
-    volRandom: 0.042
+    volRandom: 0.077
     basePitch: 1
-    pitchRandom: 0.038
+    pitchRandom: 0.065
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
@@ -268,9 +496,9 @@ MonoBehaviour:
   bowlClink:
     theClip: {fileID: 8300000, guid: a12a1cbbfbd882f478504e33d531661b, type: 3}
     baseVolume: 0.937
-    volRandom: 0.046
+    volRandom: 0.062
     basePitch: 1
-    pitchRandom: 0.036
+    pitchRandom: 0.052
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
@@ -278,48 +506,48 @@ MonoBehaviour:
   pouringCereal:
     theClip: {fileID: 8300000, guid: cd2ef4cf8fb4764478dd802947fc1fae, type: 3}
     baseVolume: 0.973
-    volRandom: 0.044
+    volRandom: 0.056
     basePitch: 1
-    pitchRandom: 0.03
+    pitchRandom: 0.036
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
-    theSource: {fileID: 8221586}
+    theSource: {fileID: 8276808}
   pouringMilk:
     theClip: {fileID: 8300000, guid: cbb17dad1096d234193441b5fb1915f3, type: 3}
     baseVolume: 0.973
-    volRandom: 0.042
+    volRandom: 0.058
     basePitch: 1
-    pitchRandom: 0.034
+    pitchRandom: 0.044
     spatialBlend: 0
-    voiceMax: 1
+    voiceMax: 2
     voiceDuration: 0
     theSource: {fileID: 8258348}
   footsteps:
   - theClip: {fileID: 8300000, guid: 234179f21a0de1441bc8663f18d43081, type: 3}
-    baseVolume: 0.902
-    volRandom: 0.038
+    baseVolume: 0.808
+    volRandom: 0.122
     basePitch: 1
-    pitchRandom: 0.042
+    pitchRandom: 0.093
     spatialBlend: 0
     voiceMax: 2
     voiceDuration: 0
     theSource: {fileID: 0}
-  - theClip: {fileID: 8300000, guid: 18d600a394d11a042aafec189fa39623, type: 3}
-    baseVolume: 0.879
-    volRandom: 0.048
+  - theClip: {fileID: 8300000, guid: d72e9b795042e5f4bb3122d3aa3d8955, type: 3}
+    baseVolume: 0.796
+    volRandom: 0.116
     basePitch: 1
-    pitchRandom: 0.038
+    pitchRandom: 0.095
     spatialBlend: 0
-    voiceMax: 2
+    voiceMax: 1
     voiceDuration: 0
     theSource: {fileID: 0}
   fridgeOpen:
     theClip: {fileID: 8300000, guid: 08debe9780eb49b43bacfa831b8da785, type: 3}
     baseVolume: 0.918
-    volRandom: 0.038
+    volRandom: 0.107
     basePitch: 1
-    pitchRandom: 0.034
+    pitchRandom: 0.077
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
@@ -327,9 +555,9 @@ MonoBehaviour:
   fridgeClose:
     theClip: {fileID: 8300000, guid: 57be897539916f947928f9b98eb908de, type: 3}
     baseVolume: 0.945
-    volRandom: 0.034
+    volRandom: 0.097
     basePitch: 1
-    pitchRandom: 0.028
+    pitchRandom: 0.069
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
@@ -360,22 +588,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].theClip
       value: 
-      objectReference: {fileID: 8300000, guid: 18d600a394d11a042aafec189fa39623, type: 3}
+      objectReference: {fileID: 8300000, guid: d72e9b795042e5f4bb3122d3aa3d8955, type: 3}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].baseVolume
-      value: 0.879
+      value: 0.796
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[0].baseVolume
-      value: 0.902
+      value: 0.808
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[0].volRandom
-      value: 0.038
+      value: 0.122
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].volRandom
-      value: 0.048
+      value: 0.116
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].basePitch
@@ -387,15 +615,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringCereal.pitchRandom
-      value: 0.03
+      value: 0.036
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringMilk.pitchRandom
-      value: 0.034
+      value: 0.044
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringCereal.volRandom
-      value: 0.044
+      value: 0.056
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringCereal.voiceMax
@@ -403,7 +631,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringMilk.voiceMax
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[0].voiceMax
@@ -411,7 +639,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].voiceMax
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: theMixer
@@ -425,15 +653,15 @@ Prefab:
         type: 2}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[1].pitchRandom
-      value: 0.038
+      value: 0.095
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[0].pitchRandom
-      value: 0.042
+      value: 0.093
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pouringMilk.volRandom
-      value: 0.042
+      value: 0.058
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: footsteps.Array.data[0].spatialBlend
@@ -453,19 +681,19 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 57be897539916f947928f9b98eb908de, type: 3}
     - target: {fileID: 0}
       propertyPath: fridgeClose.volRandom
-      value: 0.034
+      value: 0.097
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: fridgeClose.pitchRandom
-      value: 0.028
+      value: 0.069
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: fridgeOpen.pitchRandom
-      value: 0.034
+      value: 0.077
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: fridgeOpen.volRandom
-      value: 0.038
+      value: 0.107
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: spoonClink.theClip
@@ -473,19 +701,19 @@ Prefab:
       objectReference: {fileID: 8300000, guid: cfddbf71e756f59459814642deb97481, type: 3}
     - target: {fileID: 0}
       propertyPath: spoonClink.volRandom
-      value: 0.042
+      value: 0.077
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: spoonClink.pitchRandom
-      value: 0.038
+      value: 0.065
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bowlClink.volRandom
-      value: 0.046
+      value: 0.062
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bowlClink.pitchRandom
-      value: 0.036
+      value: 0.052
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: spoonClink.baseVolume
@@ -510,6 +738,42 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: fridgeClose.baseVolume
       value: 0.945
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dialogueA.theClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dbabd32c0372b094cb4ea94213132b34, type: 3}
+    - target: {fileID: 0}
+      propertyPath: dialogueB.theClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fca2c795821597409a514f638b22277, type: 3}
+    - target: {fileID: 0}
+      propertyPath: dialogueB.volRandom
+      value: 0.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dialogueA.volRandom
+      value: 0.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dialogueA.pitchRandom
+      value: 0.024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dialogueB.pitchRandom
+      value: 0.026
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Volume
+      value: 0.291
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
