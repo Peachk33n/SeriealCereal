@@ -68,6 +68,7 @@ public class AudioMaster : MonoBehaviour {
 
 	public AudioPackage dialogueA;
 	public AudioPackage dialogueB;
+	public AudioPackage winStinger;
 
 	[Header("In-Game")]
 
@@ -140,7 +141,7 @@ public class AudioMaster : MonoBehaviour {
 		return theAudioSource;
 	}
 
-	AudioSource PlayAudioPackage(AudioPackage thePackage, Vector3 position, float volParam = 1f, float delay = 0f, float pan = 0f)
+	public AudioSource PlayAudioPackage(AudioPackage thePackage, Vector3 position, float volParam = 1f, float delay = 0f, float pan = 0f)
 	{
 		AudioSource theSource;
 
@@ -193,9 +194,10 @@ public class AudioMaster : MonoBehaviour {
 	}
 
 	IEnumerator FootstepTimer(float rate) {
-		yield return new WaitForSeconds(0.01f / rate);
+		yield return new WaitForSeconds(0.004f / rate);
 		PlayAudioPackage(footsteps[stepIndex], theTransform.position);
 		stepIndex = (stepIndex + 1) % footsteps.Length;
+		yield return new WaitForSeconds(0.004f / rate);
 		FootstepRoutine = null;
 		yield return null;
 	}

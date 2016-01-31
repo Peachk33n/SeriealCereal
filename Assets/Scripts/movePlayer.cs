@@ -24,8 +24,9 @@ public class movePlayer : MonoBehaviour {
 
         transform.Translate(Vector2.right * moveX * playerSpeed * Time.deltaTime);
 		transform.Translate(Vector2.up * moveY * playerSpeed * Time.deltaTime);
-		
-        if (Input.GetMouseButton(0)) {
+
+		// I [Colin] moved the raycasting to a GetMouseButtonDown() input so it is only true for one frame each time the player taps the screen/clicks the mouse.
+		if (Input.GetMouseButtonDown(0)) {
 			// item selection using "mouse"
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
@@ -34,16 +35,28 @@ public class movePlayer : MonoBehaviour {
 				Debug.Log("Trying to select " + hit.collider.transform.name 
 					+ " which is " + itemDistance + " away");
 				if (itemDistance <= minItemDistance) { // if select succesful
-					Debug.Log("Acting upon: " + hit.collider.transform.name);
+					Debug.Log ("Acting upon: " + hit.collider.transform.name);
 					// send the selected object "ActedUpon"
-					hit.collider.gameObject.SendMessage("ActedUpon");
+					hit.collider.gameObject.SendMessage ("ActedUpon");
+					AudioMaster.instance.PlayAudioPackage(AudioMaster.instance.dialogueA, transform.position);
+				} else {
+					AudioMaster.instance.PlayAudioPackage(AudioMaster.instance.dialogueB, transform.position);
 				}
 			}
+		}
+
+		if (Input.GetMouseButton(0)) {
 			// move player towards the current mouse position when mouse is down
 			var targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			targetPos.z = transform.position.z;
-			transform.position = Vector3.MoveTowards(transform.position, targetPos, playerSpeed * Time.deltaTime);
-            // TODO: Integrate mouse movement with AudioMaster
+
+			// I [Colin] added this if statement so that the PC will not move if the player is holding/tapping on an object that is very close to the PC.
+			if (Vector3.Distance(targetPos, transform.position) >= 0.6f) {
+				transform.position = Vector3.MoveTowards(transform.position, targetPos, playerSpeed * Time.deltaTime);
+            	// TODO: Integrate mouse movement with AudioMaster
+				AudioMaster.instance.PlayFootsteps(playerSpeed * Time.deltaTime);
+				// Debug.Log ("Moving PC at max rate of: " + playerSpeed * Time.deltaTime);
+			}
 		}
         if (Mathf.Abs(rateX.x) > 0 | Mathf.Abs(rateY.y) > 0) {
 			Debug.Log ("Moving PC at rateX of: " + rateX.x + " and rateY of: " + rateY.y);

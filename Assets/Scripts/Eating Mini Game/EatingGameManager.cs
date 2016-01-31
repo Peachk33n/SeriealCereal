@@ -33,7 +33,7 @@ public class EatingGameManager : MonoBehaviour {
 		Debug.Log("rotationRateUnbiased: " + mGyro.rotationRateUnbiased);
 		Debug.Log("userAcceleration: " + mGyro.userAcceleration);*/
 
-		Debug.Log("the Quat: " + Get());
+		// Debug.Log("the Quat: " + Get());
 	}
 
 	public bool HasGyroscope{

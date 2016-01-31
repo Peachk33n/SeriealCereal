@@ -465,33 +465,43 @@ MonoBehaviour:
     m_RotationOrder: 4
   dialogueA:
     theClip: {fileID: 8300000, guid: dbabd32c0372b094cb4ea94213132b34, type: 3}
-    baseVolume: 0.933
+    baseVolume: 0.652
     volRandom: 0.034
     basePitch: 1
-    pitchRandom: 0.024
+    pitchRandom: 0.02
     spatialBlend: 0
     voiceMax: 1
-    voiceDuration: 0
+    voiceDuration: 0.62
     theSource: {fileID: 0}
   dialogueB:
     theClip: {fileID: 8300000, guid: 3fca2c795821597409a514f638b22277, type: 3}
-    baseVolume: 0.902
+    baseVolume: 0.636
     volRandom: 0.038
     basePitch: 1
-    pitchRandom: 0.026
+    pitchRandom: 0.022
+    spatialBlend: 0
+    voiceMax: 1
+    voiceDuration: 0.61
+    theSource: {fileID: 0}
+  winStinger:
+    theClip: {fileID: 8300000, guid: 700bf903975e97f4ea5dd2c230585e7b, type: 3}
+    baseVolume: 0.52
+    volRandom: 0.017
+    basePitch: 1
+    pitchRandom: 0.008
     spatialBlend: 0
     voiceMax: 1
     voiceDuration: 0
     theSource: {fileID: 0}
   spoonClink:
     theClip: {fileID: 8300000, guid: cfddbf71e756f59459814642deb97481, type: 3}
-    baseVolume: 0.898
+    baseVolume: 0.883
     volRandom: 0.077
     basePitch: 1
     pitchRandom: 0.065
     spatialBlend: 0
     voiceMax: 1
-    voiceDuration: 0
+    voiceDuration: 0.25
     theSource: {fileID: 0}
   bowlClink:
     theClip: {fileID: 8300000, guid: a12a1cbbfbd882f478504e33d531661b, type: 3}
@@ -501,17 +511,17 @@ MonoBehaviour:
     pitchRandom: 0.056
     spatialBlend: 0
     voiceMax: 1
-    voiceDuration: 0
+    voiceDuration: 0.41
     theSource: {fileID: 0}
   cerealBox:
     theClip: {fileID: 8300000, guid: 3fdfe0fd877253645b8641dcc2e5fc12, type: 3}
-    baseVolume: 0.699
+    baseVolume: 0.726
     volRandom: 0.087
     basePitch: 1
     pitchRandom: 0.054
     spatialBlend: 0
     voiceMax: 1
-    voiceDuration: 0
+    voiceDuration: 0.36
     theSource: {fileID: 0}
   pouringCereal:
     theClip: {fileID: 8300000, guid: cd2ef4cf8fb4764478dd802947fc1fae, type: 3}
@@ -521,7 +531,7 @@ MonoBehaviour:
     pitchRandom: 0.038
     spatialBlend: 0
     voiceMax: 1
-    voiceDuration: 0
+    voiceDuration: 4.36
     theSource: {fileID: 8276808}
   pouringMilk:
     theClip: {fileID: 8300000, guid: cbb17dad1096d234193441b5fb1915f3, type: 3}
@@ -531,7 +541,7 @@ MonoBehaviour:
     pitchRandom: 0.044
     spatialBlend: 0
     voiceMax: 2
-    voiceDuration: 0
+    voiceDuration: 4.45
     theSource: {fileID: 8258348}
   chewing:
     theClip: {fileID: 8300000, guid: 9d122d2367ebd9944a1dcd3618d72660, type: 3}
@@ -541,7 +551,7 @@ MonoBehaviour:
     pitchRandom: 0.044
     spatialBlend: 0
     voiceMax: 1
-    voiceDuration: 0
+    voiceDuration: 1.85
     theSource: {fileID: 0}
   footsteps:
   - theClip: {fileID: 8300000, guid: 234179f21a0de1441bc8663f18d43081, type: 3}
@@ -551,7 +561,7 @@ MonoBehaviour:
     pitchRandom: 0.093
     spatialBlend: 0
     voiceMax: 2
-    voiceDuration: 0
+    voiceDuration: 0.27
     theSource: {fileID: 0}
   - theClip: {fileID: 8300000, guid: d72e9b795042e5f4bb3122d3aa3d8955, type: 3}
     baseVolume: 0.796
@@ -560,7 +570,7 @@ MonoBehaviour:
     pitchRandom: 0.095
     spatialBlend: 0
     voiceMax: 1
-    voiceDuration: 0
+    voiceDuration: 0.23
     theSource: {fileID: 0}
   fridgeOpen:
     theClip: {fileID: 8300000, guid: 08debe9780eb49b43bacfa831b8da785, type: 3}
@@ -570,7 +580,7 @@ MonoBehaviour:
     pitchRandom: 0.077
     spatialBlend: 0
     voiceMax: 1
-    voiceDuration: 0
+    voiceDuration: 0.74
     theSource: {fileID: 0}
   fridgeClose:
     theClip: {fileID: 8300000, guid: 57be897539916f947928f9b98eb908de, type: 3}
@@ -580,7 +590,7 @@ MonoBehaviour:
     pitchRandom: 0.069
     spatialBlend: 0
     voiceMax: 1
-    voiceDuration: 0
+    voiceDuration: 0.32
     theSource: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
@@ -737,7 +747,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: spoonClink.baseVolume
-      value: 0.898
+      value: 0.883
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bowlClink.baseVolume
@@ -777,11 +787,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: dialogueA.pitchRandom
-      value: 0.024
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: dialogueB.pitchRandom
-      value: 0.026
+      value: 0.022
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Volume
@@ -797,15 +807,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: dialogueA.baseVolume
-      value: 0.933
+      value: 0.652
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: dialogueB.baseVolume
-      value: 0.902
+      value: 0.636
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: dialogueA.voiceDuration
-      value: 0
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
@@ -817,7 +827,7 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 3fdfe0fd877253645b8641dcc2e5fc12, type: 3}
     - target: {fileID: 0}
       propertyPath: cerealBox.baseVolume
-      value: 0.699
+      value: 0.726
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: cerealBox.volRandom
@@ -842,6 +852,66 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: chewing.pitchRandom
       value: 0.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: winStinger.theClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 700bf903975e97f4ea5dd2c230585e7b, type: 3}
+    - target: {fileID: 0}
+      propertyPath: winStinger.baseVolume
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: winStinger.volRandom
+      value: 0.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: winStinger.pitchRandom
+      value: 0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dialogueB.voiceDuration
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: spoonClink.voiceDuration
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bowlClink.voiceDuration
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cerealBox.voiceDuration
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pouringCereal.voiceDuration
+      value: 4.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pouringMilk.voiceDuration
+      value: 4.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: chewing.voiceDuration
+      value: 1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: footsteps.Array.data[0].voiceDuration
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: footsteps.Array.data[1].voiceDuration
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fridgeOpen.voiceDuration
+      value: 0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fridgeClose.voiceDuration
+      value: 0.32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
